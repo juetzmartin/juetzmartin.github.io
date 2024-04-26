@@ -1,5 +1,5 @@
- ****DISSERTATION Entwuf Stand: 02/2024:****
-# Das prognostisches Potential von CD44 als Tumorstammzellmarker für die kombinierte Radiochemotherapie des lokal fortgeschrittenen Kopf-Hals-Plattenepithelkarzinoms
+Das prognostisches Potential von CD44 als Tumorstammzellmarker für die kombinierte Radiochemotherapie des lokal fortgeschrittenen Kopf-Hals-Plattenepithelkarzinoms
+
 ## ***Kurzfassung***
 
 **Motivation.** Patienten mit lokal fortgeschrittenen Kopf-Hals-Plattenepithelkarzinomen erhalten standardmäßig eine primäre oder postoperative Radiochemotherapie. Dabei zeigen Patienten mit der gleichen Tumorentität und analogen Staging und Grading nicht selten einen sehr unterschiedlichen klinischen Verlauf bezüglich des Überlebens, Metastasierung und Ansprechen auf die Standardtherapie. Des
