@@ -1,0 +1,44 @@
+trigger:
+- main  # Läuft, wenn Code in den `main`-Branch gepusht wird
+
+pool:
+  vmImage: ubuntu-latest  # Nutzt die neueste Ubuntu-Version für die Pipeline
+
+steps:
+- task: UseNode@1
+  inputs:
+    version: '18.x'  # Installiert Node.js Version 18
+  displayName: 'Setup Node.js'
+
+- script: npm install
+  displayName: 'Installiere Abhängigkeiten'
+
+- script: npm test
+  displayName: 'Führe Tests aus'
+
+- script: npm run build
+  displayName: 'Baue das Projekt'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: 'dist/'  # Passe dies an, falls dein Build-Ordner anders heißt
+    includeRootFolder: false
+    archiveType: zip
+    archiveFile: $(Build.ArtifactStagingDirectory)/build.zip
+    replaceExistingArchive: true
+  displayName: 'Erstelle ein ZIP-Archiv'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: $(Build.ArtifactStagingDirectory)/build.zip
+    artifactName: 'drop'
+  displayName: 'Veröffentliche Build-Artefakt'
+
+# Optional: Deployment zu Azure Static Web Apps
+- task: AzureStaticWebApp@0
+  inputs:
+    app_location: "dist"  # Passe dies an, falls dein Ordner anders heißt
+    output_location: ""
+    api_location: ""
+    azure_static_web_apps_api_token: $(deployment_token)
+  displayName: 'Deploy zu Azure Static Web Apps'
