@@ -1,0 +1,25 @@
+{
+  "name": "runner-images",
+  "version": "1.0.0",
+  "description": "GitHub Actions runner images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuetzM/runner-images.git"
+  },
+  "author": "JuetzM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuetzM/runner-images/issues"
+  },
+  "homepage": "https://github.com/JuetzM/runner-images#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
